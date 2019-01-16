@@ -1771,7 +1771,7 @@
         current = this.getHash(this.iframe.contentWindow);
       }
 
-      if (current === this.fragment) return false;
+      if (current === this.fragment || this.decodeFragment(current) === this.fragment) return false;
       if (this.iframe) this.navigate(current);
       this.loadUrl();
     },
