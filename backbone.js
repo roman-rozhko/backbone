@@ -1770,7 +1770,7 @@
       if (current === this.fragment && this.iframe) {
         current = this.getHash(this.iframe.contentWindow);
       }
-
+      console.log('*****[backbone] checkUrl: {current: "' + current + '", fragment: "'+ this.fragment + '"}')
       if (current === this.fragment) return false;
       if (this.iframe) this.navigate(current);
       this.loadUrl();
